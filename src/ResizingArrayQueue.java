@@ -136,7 +136,7 @@ public class ResizingArrayQueue<Item> implements Iterable<Item> {
      * @param args the command-line arguments
      */
     public static void main(String[] args) {
-        System.out.println("median3 by Munira Tabassum");
+        System.out.println("Dynamic Capacity Array Queue by Munira Tabassum");
         ResizingArrayQueue<String> queue = new ResizingArrayQueue<String>();
         while (!StdIn.isEmpty()) {
             String item = StdIn.readString();
