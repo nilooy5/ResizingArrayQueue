@@ -73,7 +73,8 @@ public class ResizingArrayQueue<Item> implements Iterable<Item> {
      */
     public void enqueue(Item item) {
         // double size of array if necessary and recopy to front of array
-        if (n == q.length) resize(2*q.length);   // double size of array if necessary
+        if (n == (q.length/3)) resize(2*q.length);   // double size of array if necessary
+        else if (n == (q.length/4)) resize((int) Math.ceil(.5*q.length));
         q[last++] = item;                        // add item
         if (last == q.length) last = 0;          // wrap-around
         n++;
@@ -143,5 +144,4 @@ public class ResizingArrayQueue<Item> implements Iterable<Item> {
         }
         StdOut.println("(" + queue.size() + " left on queue)");
     }
-
 }
